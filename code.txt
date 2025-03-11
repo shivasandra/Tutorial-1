@@ -1,0 +1,26 @@
+import numpy as np
+import pandas as pd
+import statsmodels.api as sm
+
+df = pd.read_csv("advertising_data.txt", delimiter=",")
+
+# Define independent variables (TV, Radio, Newspaper) and dependent variable (Sales)
+X = df[['TV', 'Radio', 'Newspaper']]
+y = df['Sales']
+
+# Add a constant (intercept) to the model
+X = sm.add_constant(X)
+
+# Fit the multiple linear regression model
+model = sm.OLS(y, X).fit()
+
+# Extract RSE, R², and F-statistic
+rse = np.sqrt(model.mse_resid)  # Residual Standard Error
+r_squared = model.rsquared  # R-squared value
+f_statistic = model.fvalue  # F-statistic
+
+# Print results
+print("Regression Summary:\n", model.summary())
+print(f"\nResidual Standard Error (RSE): {rse:.4f}")
+print(f"R-squared (R²): {r_squared:.4f}")
+print(f"F-statistic: {f_statistic:.4f}")

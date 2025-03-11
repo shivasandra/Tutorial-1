@@ -1,0 +1,23 @@
+Analysis & Commentary on Regression Results
+1. Residual Standard Error (RSE): 2.15
+
+-The RSE represents the average deviation of actual sales from the predicted values.
+-A value of 2.15 means that, on average, the model's predictions deviate by approximately 2.15 sales units.
+-A lower RSE would indicate a better model fit, suggesting that there may be some unexplained variability in sales.
+
+2. R² (R-squared): 0.547
+
+-This means 54.7% of the variation in Sales can be explained by the advertising budgets (TV, Radio, Newspaper).
+-While this is a moderate correlation, it indicates that there are other factors affecting sales that are not captured in this model.
+-A higher R² (closer to 1) would indicate a stronger model fit.
+
+3. F-statistic: 6.43
+
+-The F-statistic tests the overall significance of the model.
+-A value of 6.43 suggests that at least one of the predictor variables (TV, Radio, Newspaper) has a significant effect on sales.
+-If the p-value associated with the F-statistic is small (typically < 0.05), it confirms that the model as a whole is meaningful.
+
+Insights:
+-TV & Radio likely contribute significantly to sales based on prior marketing studies.
+-Newspaper advertising might have a weaker effect, and we should check its p-value and coefficients for statistical significance.
+-The moderate R² suggests that additional factors (e.g., digital marketing, seasonality, competitor activities) might influence sales.
