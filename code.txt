@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import statsmodels.api as sm
 
-df = pd.read_csv("advertising_data.txt", delimiter=",")
+df = pd.read_csv("data.txt", delimiter=",")
 
 # Define independent variables (TV, Radio, Newspaper) and dependent variable (Sales)
 X = df[['TV', 'Radio', 'Newspaper']]
